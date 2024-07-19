@@ -14,4 +14,10 @@ describe('PokeClient', () => {
         const data = response.data;
         expect(data.name).toBe('generation-i');
     });
+
+    it('should fetch a list of all Pokemon', async () => {
+        const response = await client.getAllPokemon( 0, 10);
+        const data = response.data;
+        expect(data.count).toBe(1302);
+    });
 });

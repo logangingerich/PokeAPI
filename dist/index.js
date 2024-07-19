@@ -8,11 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __importDefault(require("axios"));
+const axios_1 = require("axios");
 class PokeClient {
     constructor(baseURL = 'https://pokeapi.co/api/v2/') {
         this.client = axios_1.default.create({
@@ -39,6 +36,22 @@ class PokeClient {
         return __awaiter(this, arguments, void 0, function* (nameOrId, offset = 0, limit = 20) {
             try {
                 const response = yield this.client.get(`generation/${nameOrId}`, {
+                    params: {
+                        offset: offset,
+                        limit: limit
+                    }
+                });
+                return response;
+            }
+            catch (error) {
+                throw new Error(error.message || 'An unknown error occurred');
+            }
+        });
+    }
+    getAllPokemon() {
+        return __awaiter(this, arguments, void 0, function* (offset = 0, limit = 20) {
+            try {
+                const response = yield this.client.get(`pokemon/`, {
                     params: {
                         offset: offset,
                         limit: limit

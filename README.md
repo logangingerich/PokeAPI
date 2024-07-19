@@ -16,10 +16,10 @@ Here are some examples of how to use the Pokemon SDK.
 
 ### Importing the SDK
 
-First, import the `PokemonClient` class from the SDK.
+First, import the `PokeClient` class from the SDK.
 
 ```typescript
-import PokemonClient from 'pokemon-sdk';
+import PokeClient from 'pokeapi';
 ```
 
 ### Creating an Instance of PokemonClient
@@ -27,7 +27,7 @@ import PokemonClient from 'pokemon-sdk';
 Create an instance of `PokemonClient`.
 
 ```typescript
-const client = new PokemonClient();
+const client = new PokeClient();
 ```
 
 ### Fetching a Pokemon by Name or ID
