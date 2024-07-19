@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "build": "tsc --project tsconfig.build.json",
-    "postinstall": "npm run build"
   },
   "jest": {
     "preset": "ts-jest",
