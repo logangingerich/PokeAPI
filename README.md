@@ -82,3 +82,30 @@ To test the SDK, follow these steps:
    npm test
    ```
 
+## Critical Design Decisions
+
+1. **TypeScript for Type Safety**
+   - The SDK is written in TypeScript, which provides type safety and better developer experience with autocompletion and type checking.
+
+2. **Class-Based Structure**
+   - The SDK uses a class (`PokeClient`) to encapsulate the API interactions, promoting encapsulation and modularity.
+
+3. **Async/Await for Asynchronous Operations**
+   - The SDK leverages `async`/`await` syntax for handling asynchronous operations, making the code more readable and easier to maintain.
+
+4. **Error Handling**
+   - Error handling is centralized within the `try/catch` blocks, ensuring that errors are caught and meaningful messages are thrown.
+
+## Tools and Libraries
+
+1. **TypeScript**
+   - Provides static typing, interfaces, and advanced type features.
+
+2. **Axios**
+   - A promise-based HTTP client for making API requests.
+
+3. **Jest**
+   - A testing framework for JavaScript and TypeScript.
+
+4. **npm**
+   - Node package manager used for managing dependencies and scripts.
