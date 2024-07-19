@@ -1,4 +1,4 @@
-import PokeClient from './index';
+import PokeClient from '../src/index';
 
 describe('PokeClient', () => {
     const client = new PokeClient();
