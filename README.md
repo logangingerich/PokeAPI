@@ -58,10 +58,6 @@ client.getAllPokemon(0, 10)
   .catch(error => console.error(error));
 ```
 
-### Fetching an Ability by Name or ID
-
-
-
 ## Methods
 
 The SDK provides the following methods:
