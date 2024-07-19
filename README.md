@@ -1,4 +1,4 @@
-# Pokemon SDK
+# PokeAPI SDK
 
 A TypeScript SDK to interact with the Pokemon API. This SDK allows developers to easily access data about Pokemon and their various generations!
 
