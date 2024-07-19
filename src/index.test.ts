@@ -1,18 +1,17 @@
-import Client from './index';
+import PokeClient from './index';
 
-describe('Client', () => {
-    const client = new Client();
+describe('PokeClient', () => {
+    const client = new PokeClient();
 
     it('should fetch a Pokemon by name', async () => {
         const response = await client.getPokemon('snorlax', 0, 10);
-        const data = response;
-        console.log(data);
-        expect(data.weight).toBe(4600);
+        const data = response.data;
+        expect(data.name).toBe("snorlax");
     });
 
     it('should fetch a generation by name', async () => {
         const response = await client.getGeneration('generation-i', 0, 10);
-        const data = response;
+        const data = response.data;
         expect(data.name).toBe('generation-i');
     });
 });
